@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #F8FAFC */
+  --foreground: 222 84% 5%; /* #0F172A */
+  --muted: 210 40% 96%; /* #F1F5F9 */
+  --muted-foreground: 215 16% 47%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 222 84% 5%; /* #0F172A */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 222 84% 5%; /* #0F172A */
+  --border: 214 32% 91%; /* #E2E8F0 */
+  --input: 214 32% 91%; /* #E2E8F0 */
+  --primary: 217 91% 60%; /* #3B82F6 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 210 40% 96%; /* #F1F5F9 */
+  --secondary-foreground: 222 84% 5%; /* #0F172A */
+  --accent: 210 40% 96%; /* #F1F5F9 */
+  --accent-foreground: 222 84% 5%; /* #0F172A */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 217 91% 60%; /* #3B82F6 */
+  --radius: 0.5rem;
+  --success: 142 71% 45%; /* #10B981 */
+  --warning: 38 92% 50%; /* #F59E0B */
+  --error: 0 84% 60%; /* #EF4444 */
+}
+
+.dark {
+  --background: 222 84% 5%; /* #0F172A */
+  --foreground: 210 40% 98%; /* #F8FAFC */
+  --muted: 217 33% 17%; /* #1E293B */
+  --muted-foreground: 215 20% 65%; /* #94A3B8 */
+  --popover: 222 84% 5%; /* #0F172A */
+  --popover-foreground: 210 40% 98%; /* #F8FAFC */
+  --card: 222 84% 5%; /* #0F172A */
+  --card-foreground: 210 40% 98%; /* #F8FAFC */
+  --border: 217 33% 17%; /* #1E293B */
+  --input: 217 33% 17%; /* #1E293B */
+  --primary: 217 91% 60%; /* #3B82F6 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 217 33% 17%; /* #1E293B */
+  --secondary-foreground: 210 40% 98%; /* #F8FAFC */
+  --accent: 217 33% 17%; /* #1E293B */
+  --accent-foreground: 210 40% 98%; /* #F8FAFC */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 217 91% 60%; /* #3B82F6 */
+  --success: 142 71% 45%; /* #10B981 */
+  --warning: 38 92% 50%; /* #F59E0B */
+  --error: 0 84% 60%; /* #EF4444 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+  
+  .text-error {
+    color: hsl(var(--error));
+  }
+  
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  
+  .bg-warning {
+    background-color: hsl(var(--warning));
+  }
+  
+  .bg-error {
+    background-color: hsl(var(--error));
+  }
+}
+
+/* Custom Font Family */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animation for loading dots */
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.4s infinite ease-in-out both;
+}
